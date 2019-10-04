@@ -44,7 +44,6 @@
     <Compile Include="Numbers\INumberGenerator.cs" />
     <Compile Include="Numbers\NumberGenerator.cs" />
     <Compile Include="Numbers\NumberUtils.cs" />
-    <Compile Include="Numbers\Prime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strings\StringGenerator.cs" />
     <Compile Include="Strings\StringUtil.cs" />
