@@ -1,15 +1,16 @@
 ﻿using Assignment.Numbers;
+using System;
 using System.Collections.Generic;
 
 namespace Assignment.Strings
 {
     public class StringGenerator
     {
-        private readonly NumberGenerator _numberGenerator;
+        private readonly INumberGenerator numberGenerator;
 
-        public StringGenerator(NumberGenerator numberGenerator)
+        public StringGenerator(INumberGenerator numberGenerator)
         {
-            _numberGenerator = numberGenerator;
+            this.numberGenerator = numberGenerator;
         }
 
         /// <summary>
@@ -18,17 +19,21 @@ namespace Assignment.Strings
         /// <param name="pairCount">Number of items to generate.</param>
         /// <param name="max">Maximum value of numbers generated.</param>
         /// <returns>A list of strings, containing an even and an odd positive number, separated by a comma (,). 
-        /// All numbers are in the range of [0..max]</returns>
+        /// Any numbers are in the range of [0..max]</returns>
+        /// <exception cref="ArgumentOutOfRangeException">Throws when 'pairCount' less than 1.</exception>
         public List<string> GenerateEvenOddPairs(int pairCount, int max)
         {
-            var EvenOddPairs = new List<string>();
-            for (int i = 1; i < pairCount; i++)
+            if (pairCount < 1)
+                throw new ArgumentOutOfRangeException($"'{nameof(pairCount)}' must be grater than zero!");
+
+            var evenOddPairs = new List<string>();
+            for (int i = 0; i < pairCount; i++)
             {
-                var element = _numberGenerator.GenerateEven(max) + "," + _numberGenerator.GenerateOdd(max);
-                EvenOddPairs.Add(element);
+                var element = numberGenerator.GenerateEven(max) + "," + numberGenerator.GenerateOdd(max);
+                evenOddPairs.Add(element);
             }
 
-            return EvenOddPairs;
+            return evenOddPairs;
         }
     }
 }

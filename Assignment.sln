@@ -5,7 +5,12 @@ VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment", "Assignment\Assignment.csproj", "{8EF87443-B61B-41F9-955D-39A0BC5D79A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject1", "NUnitTestProject1\NUnitTestProject1.csproj", "{C7A448CD-EEF5-4736-943F-189C121E7830}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTestProject1", "NUnitTestProject1\NUnitTestProject1.csproj", "{C7A448CD-EEF5-4736-943F-189C121E7830}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C2232AA2-092A-40E9-AC16-4EE4C4C9546E}"
+	ProjectSection(SolutionItems) = preProject
+		Test Automation kurzus Unit Testing beadandó.docx = Test Automation kurzus Unit Testing beadandó.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
